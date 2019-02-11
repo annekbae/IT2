@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+
+	</head>
+	<body>
+		<input type="number" id="tall">
+		<button>Skriv et år, levde Einstein da?</button>
+		<p id="feedback"></p>
+	</body>
+	<script>
+		var tallEl = document.querySelector("#tall");
+		var feedbackEl = document.querySelector("#feedback");
+
+
+		var buttonEl =document.querySelector("button");
+		buttonEl.addEventListener("click", skrivSvar);
+
+
+		function skrivSvar(){
+			var year = tallEl.value;
+
+			if (year >= 1879 && year <= 1955){
+		    feedbackEl.innerHTML = "Einstein lever";
+		  }
+		  else if (year < 1879){
+		    feedbackEl.innerHTML ="Einstein er ikke født";
+		  }
+		  else if (year > 1955){
+		    feedbackEl.innerHTML = "Einstein lever ikke";
+		  }
+
+		}
+	</script>
+</html>
